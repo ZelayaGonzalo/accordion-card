@@ -59,10 +59,14 @@ body {
 }
 .frame-container .right-column {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.frame-container .right-column .faq-list {
+  height: 70%;
 }
 
 .faq-list {
@@ -83,17 +87,61 @@ body {
 
 .faq-answer {
   color: #787887;
-  display: none;
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.faq-show {
+  display: block;
   padding-top: 2.5%;
+  line-height: 1;
 }
 
 .arrow-icon {
   right: 0;
   position: absolute;
+  transition: 0.3s;
 }
 
 .upside {
   transform: rotate(180deg);
 }
+
+@media (max-width: 600px) {
+  .frame-container {
+    width: 90%;
+    min-width: 90%;
+    height: 75%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    margin-top: 20%;
+    position: relative;
+  }
+  .frame-container .left-column {
+    position: absolute;
+    width: 75%;
+    top: -50%;
+  }
+  .frame-container .right-column {
+    width: 90%;
+    padding-top: 10%;
+  }
+}
+@media (max-width: 500px) {
+  .frame-container {
+    height: 60%;
+  }
+  .frame-container .right-column {
+    padding-top: 20%;
+  }
+}
+/*@media(max-width:450px){
+    .frame-container .right-column{
+        padding-top: 30%;
+    }
+}*/
 
 /*# sourceMappingURL=style.css.map */

@@ -11,7 +11,7 @@ for(let i=0;i < questions.length;i++){
 function activate(event){
     target = event.target;
     if(active[target.id] === true && typeof(active[target.id]) === 'boolean'){
-        answers[target.id].style.display='none';
+        answers[target.id].classList.remove('faq-show');
         active[target.id] = false;
         changeArrowDown(target);
         return
@@ -20,12 +20,12 @@ function activate(event){
         if(typeof(active[target.id]) === 'boolean'){
             if(active.some((element)=> element === true)){
                 for(let i=0;i < answers.length;i++){
-                    answers[i].style.display ='none';
+                    answers[i].classList.remove('faq-show');
                     active[i] = false;
                     changeArrowDown(questions[i])
                 }
             }
-            answers[target.id].style.display = 'block';
+            answers[target.id].classList.add('faq-show');
             active[target.id] = true;
             changeArrowUp(target);
         }
@@ -35,7 +35,7 @@ function activate(event){
 
 function hide(event){
     const parent = event.target.parentNode;
-    event.target.style.display = 'none'
+    event.target.classList.remove('faq-show');
     active[parent.id] = false;
     changeArrowDown(parent);
 }
