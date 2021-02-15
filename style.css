@@ -32,7 +32,7 @@ body {
   position: absolute;
   bottom: 0%;
 }
-.attribution a{
+.attribution a {
   color: white;
 }
 
@@ -142,7 +142,7 @@ body {
     top: -50%;
   }
   .frame-container .right-column {
-    width: 90%;
+    width: 100%;
     padding-top: 10%;
   }
 }
